@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'numbersFnt';
+    src: url('fonts/numbersFont.ttf');
+}
+
+@font-face {
+    font-family: 'textFnt';
+    src: url('fonts/textFont.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url('images/bodyBG.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainContainer {
+    padding: 50px 0px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    width: 1000px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    color: #FCF6F5;
+    font-family: 'textFnt', sans-serif;
+    font-size: 40px;
+
+}
+
+#year {
+    font-size: 70px;
+    background-image: linear-gradient(-225deg,
+            #231557 0%,
+            #44107a 29%,
+            #ff1361 67%,
+            #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.parentDivTimers {
+    margin-top: 50px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.timerDiv {
+    font-family: 'numbersFnt', sans-serif;
+    height: 200px;
+    width: 200px;
+    font-size: 82px;
+    color: white;
+    background-color: rgb(1, 1, 58);
+    padding: 20px 0px 0px 0px;
+    overflow: hidden;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    position: relative;
+
+}
+
+h2 {
+    font-size: x-large;
+    color: black;
+    font-family: 'numbersFnt', sans-serif;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    top: 0px;
+    margin: 0;
+    padding: 10px 0px;
+}
+
+@media only screen and (max-width: 1030px) {
+    #mainContainer {
+        width: 700px;
+    }
+
+    .timerDiv {
+        height: 140px;
+        width: 150px;
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: large;
+        padding: 6px 0px;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    body {
+        height: fit-content;
+    }
+
+    #mainContainer {
+        height: auto;
+        width: 90%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .parentDivTimers {
+        margin-top: 50px;
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timerDiv {
+        height: 200px;
+        width: 200px;
+        font-size: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .timerDiv:first-child {
+        margin-top: 0px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    #mainContainer {
+        height: auto;
+        width: 92%;
+        min-width: 300px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .parentDivTimers {
+        margin-top: 50px;
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timerDiv {
+        height: 200px;
+        width: 200px;
+        font-size: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .timerDiv:first-child {
+        margin-top: 0px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+}
+
+.swal2-title{
+    padding: 0.8em 0 0 !important;
+}
