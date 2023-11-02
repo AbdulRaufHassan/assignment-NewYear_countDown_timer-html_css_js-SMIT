@@ -128,6 +128,7 @@ h2 {
 @media only screen and (max-width: 730px) {
     body {
         height: fit-content;
+        padding: 20px 0px;
     }
 
     #mainContainer {
