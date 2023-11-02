@@ -109,9 +109,11 @@ h2 {
 }
 
 @media only screen and (max-width: 1030px) {
+    body{
+        padding: 20px 0px;
+    }
     #mainContainer {
         width: 700px;
-        padding: 20px 0px;
     }
 
     .timerDiv {
@@ -134,8 +136,6 @@ h2 {
     #mainContainer {
         height: auto;
         width: 90%;
-        margin-top: 20px;
-        margin-bottom: 20px;
     }
 
     .parentDivTimers {
